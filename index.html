@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation system Writeup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 class="header"><b>Smart Irrigation System</b></h2>
+    <div class="sub-header"> Reeshav Ghosh, Ritam Das, Rajdeep Debnath, Rishabh Rakshit, Ayush Das, Anubhab Biswas</div>
+    <div class="sub-header">January 2025</div>
+    <br>
+    <h3>1. Introduction (The Problem?)</h4>
+    <div class="smol">
+        <p>Many farms in India have been facing critical challenges in irrigation management. Traditional irrigation methods often lead to significant water wastage through over-irrigation or uneven water distribution. Farmers must manually monitor soil conditions and weather patterns, which is both time-consuming and labor-intensive. This manual approach can result in either excessive water usage during wet periods or insufficient irrigation during dry spells, directly affecting crop yields and farm profitability. Additionally, with unpredictable weather patterns and the rising costs of water resources, there's an urgent need for a more efficient, automated irrigation solution that can optimize water usage while reducing the burden on farmers.</p>
+        <p>The following images show how machines can be used to irrigation plants, but these methods are not efficient and can lead to water wastage. Moreover, these methods are not automated and require manual intervention which can be time-consuming and may also lead to human errors.</p>
+    </div>
+
+    <div class="parent-1">
+        <div class="img-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4DdDpKg8Pt5i4EFefQkHkQyZ6NjdYZlfng&s" alt="">
+            <div class="text">Fig 1: Irrigation system using drip irrigation</div>        
+        </div>
+
+        <div class="img-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMP3nKhvhCBCAAfRDGATzj3ZXYpmpotm6Chw&s" alt="">
+            <div class="text">Fig 2: Irrigation system using rollers to move water source across the fields</div>
+        </div>
+    </div>
+
+    <h3>2. Solution</h3>
+    <div class="smol">
+        <p>Our Smart Irrigation System uses smart sensors to detect soil quality in live time and turn on and off irrigation systems on live time whenever the fields are dry. These sensors include: </p>
+        <p>
+            <ul>
+                <li>Soil Moisture Sensor (for all)</li>
+                <li>Soil and Ambient Temperature Sensor (for all)</li>
+                <li>Soil pH Sensor (for higher cost farming)</li>
+                <li>Soil Electrical Conductivity Sensor (for higher cost farming)</li>
+                <li>Humidity Sensor (for all)</li>
+                <li>Water Consumption Meter (for all)</li>
+                <li>Irrigation Frequency Monitor and custom frequency (for all)</li>
+            </ul>
+        </p>
+        <p>Our features however include: </p>
+        <ul>
+            <li>Automated machine irrigation to reduce human intervention</li>
+            <li>Reduce Water wastage as much as possible</li>
+            <li>Improve overall soil quality</li>
+            <li>Weather prediction integration for optimized irrigation scheduling</li>
+            <li>Customizable irrigation plans based on crop type</li>
+            <li>Data analytics for long-term soil and crop health monitoring</li>
+        </ul>
+    </div>
+
+    <h3>3. Implementation</h3>
+    <div class="smol">
+        Our Smart Irrigation System consists of the following components:
+        <table class="tab1">
+            <tr>
+                <th>Component</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Specs</th>
+            </tr>
+            <tr>
+                <td>ESP32</td>
+                <td><img src="./esp32.png" alt=""></td>
+                <td>Rs. 250</td>
+                <td>A Low cost MCU with Wi-Fi and Bluetooth capabilities</td>
+                <td>4MB - 16MB Flash storage <br> 512KB SRAM <br> Built-in Wi-Fi and Bluetooth</td>
+            </tr>
+            <tr>
+                <td>Soil Moisture Sensor</td>
+                <td><img src="./soil moisture.png" alt=""></td>
+                <td>Rs. 50</td>
+                <td>Measures the volumetric water content in soil</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Soil pH Sensor</td>
+                <td><img src="./soil-ph.png" alt=""></td>
+                <td>Rs. > 5000</td>
+                <td>Measures the pH level of the soil</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>DHT11</td>
+                <td><img src="./dht11.png" alt=""></td>
+                <td>Rs. 65</td>
+                <td>Measures temperature and humidity</td>
+                <td>Temperature Range: 0-50°C <br> Humidity Range: 20-90% RH</td>
+            </tr>
+            <tr>
+                <td>Relay</td>
+                <td><img src="./relay.png" alt=""></td>
+                <td>Rs 35</td>
+                <td>Used to turn the machines on/off</td>
+                <td> - </td>
+            </tr>
+        </table>
+        <div class="smol">
+            <h2 style="text-align: center">THE PLAN: </h2>
+            <p>Soil Moisture sensors will be planted on the surface of the soil every 100 meters. Along with these, temperature sensors will be installed. A thick wire will be buried deep into the ground to carry all the sensor data to a central control unit. This thick wire will have a lot of small individual color coded wires.The control unit will process the data and control the irrigation system accordingly.</p>
+            <p>The irrigation system will consist of automated valves and pumps that will be controlled by the central unit based on the sensor data (using relays). The system will ensure that water is distributed evenly and only when necessary, reducing water wastage and improving crop yields.</p>
+            <p>Additionally, the system will be integrated with weather prediction services to optimize irrigation schedules based on upcoming weather conditions. This will further enhance water efficiency and ensure that crops receive the right amount of water at the right time.</p>
+            <p>Farmers will be able to monitor and control the irrigation system remotely using a web interface hosted by the ESP32 units. This interface will provide real-time data on soil conditions, water usage, and system status, allowing farmers to make informed decisions and customize irrigation plans as needed.</p>
+            <p>One practical example of the temperature and humidity sensor is rainy season. The sensor reading will prevent the irrigation system from auto ignition, and will also alert the farmer when the field is over irrigated and to take measures</p>
+            <b><p>Note: The site WILL NOT RECOMMEND ANY OVER IRRIGATION prevention techniques, but it will only tell to take action, NOT THE ACTION ITSELF</p></b>
+        </div>
+    </div>
+
+    <h3>4. FAQ </h3>
+    <div class="smol">
+        <div class="q">
+            <b><p>Q. How can I monitor my farmland?</p></b>
+            <p>ANS: The ESP32's in the farm will act as a Wi-Fi station mode, ie, they will host a webserver in them for you to access
+                <br> <br> <b>Steps to access your farmland metrics</b>
+                <ul>
+                    <li>Connect to the field Wi-Fi</li>
+                    <li>Open any browser</li>
+                    <li>Type <b>192.168.4.1</b> and search</li>  
+                </ul>
+                This will open a webserver hosted by the ESP32 in the farm. The farmer can now monitor his farm from anywhere in the field.
+            </p>
+        </div>
+
+        <div class="q">
+            <b><p>Q. The wire on the ground can damage my soil or the roots of the crops can tangle with them?</p></b>
+            <p>ANS: The wires are not on the ground, they are buried under the soil. The sensors are connected to the ESP32 via wires, but they are buried under the soil so that they do not damage the soil or the roots of the crops.</p>
+        </div>
+    
+    </div>
+
+    <h3>5. Additional Stuff</h3>
+    <div class="smol">
+        <p>(for this part, I am not sure, but if we can, it WILL MAKE A HUGE DIFFERENCE)</p>
+        <p>Since we dont have internet in fields, so for the time being, we are only limited to the ESP32's Wi-Fi capabilities, storage and processing power to display Data analytics and custom schedules for machine automation</p>
+        <p>But however we are working with LoRaWAN (Long Range Wide Area Network) to make a centralized server to store and process data. In that case, farmers can download a mobile app to monitor and set schedules for his farm. This server machine WILL open a whole lot of 'server-side processing' ONLY WITH CODE and NO HARDWARE MODIFICATIONS.</p>
+    </div>
+
+    <div class="c">
+        Copyright © 2025
+        <br>Original creator: Reeshav_Ghosh200
+    </div>
+</body>
+</html>

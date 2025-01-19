@@ -6,14 +6,20 @@
     <title>Smart Irrigation system Writeup</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3dcdbc234b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <h2 class="header"><b>Smart Irrigation System</b></h2>
-    <div class="sub-header"> Reeshav Ghosh, Ritam Das, Rajdeep Debnath, Rishabh Rakshit, Ayush Das, Anubhab Biswas</div>
+    <div class="sub-header"> <b>Reeshav Ghosh</b>, Ritam Das, Rajdeep Debnath, Rishabh Rakshit, Ayush Das, Anubhab Biswas</div>
     <div class="sub-header">January 2025</div>
     <br>
+
+    <div class="dark" id="light" style="background-color: white;"><i class="fa-regular fa-sun"></i></div>
+    <div class="dark" id="dark" style="background-color: black;"><i class="fa-solid fa-moon" style="color: white;"></i></div>
+
+    
     <h3>1. Introduction (The Problem?)</h4>
     <div class="smol">
         <p>Many farms in India have been facing critical challenges in irrigation management. Traditional irrigation methods often lead to significant water wastage through over-irrigation or uneven water distribution. Farmers must manually monitor soil conditions and weather patterns, which is both time-consuming and labor-intensive. This manual approach can result in either excessive water usage during wet periods or insufficient irrigation during dry spells, directly affecting crop yields and farm profitability. Additionally, with unpredictable weather patterns and the rising costs of water resources, there's an urgent need for a more efficient, automated irrigation solution that can optimize water usage while reducing the burden on farmers.</p>
@@ -31,7 +37,7 @@
             <div class="text">Fig 2: Irrigation system using rollers to move water source across the fields</div>
         </div>
     </div>
-
+    <hr>
     <h3>2. Solution</h3>
     <div class="smol">
         <p>Our Smart Irrigation System uses smart sensors to detect soil quality in live time and turn on and off irrigation systems on live time whenever the fields are dry. These sensors include: </p>
@@ -56,7 +62,7 @@
             <li>Data analytics for long-term soil and crop health monitoring</li>
         </ul>
     </div>
-
+    <hr>
     <h3>3. Implementation</h3>
     <div class="smol">
         Our Smart Irrigation System consists of the following components:
@@ -114,7 +120,7 @@
             <b><p>Note: The site WILL NOT RECOMMEND ANY OVER IRRIGATION prevention techniques, but it will only tell to take action, NOT THE ACTION ITSELF</p></b>
         </div>
     </div>
-
+    <hr>
     <h3>4. FAQ </h3>
     <div class="smol">
         <div class="q">
@@ -136,17 +142,29 @@
         </div>
     
     </div>
-
+    <hr>
     <h3>5. Additional Stuff</h3>
     <div class="smol">
         <p>(for this part, I am not sure, but if we can, it WILL MAKE A HUGE DIFFERENCE)</p>
         <p>Since we dont have internet in fields, so for the time being, we are only limited to the ESP32's Wi-Fi capabilities, storage and processing power to display Data analytics and custom schedules for machine automation</p>
         <p>But however we are working with LoRaWAN (Long Range Wide Area Network) to make a centralized server to store and process data. In that case, farmers can download a mobile app to monitor and set schedules for his farm. This server machine WILL open a whole lot of 'server-side processing' ONLY WITH CODE and NO HARDWARE MODIFICATIONS.</p>
+        <p>Also, we are working with some AI features to predict the weather and soil conditions based on the sensor readings. This will further optimize the irrigation schedules and improve water efficiency. But AI MUST require Internet, which is challenge for now</p>
     </div>
-
-    <div class="c">
+    <hr>
+    <h3>6. Challenges Ahead</h3>
+    <div class="smol">
+        <p>For the time being, the only challenges are :- </p>
+        <ul>
+            <li>Internet connectivity for better communications</li>
+            <li>Signal Degradation for lond distances (the temporary solutions is thicker wires but these will increase production costs)</li>
+        </ul>
+    </div>
+    <hr> <br>
+    <div class="c" style="color: black;">
         Copyright © 2025
         <br>Original creator: Reeshav_Ghosh200
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

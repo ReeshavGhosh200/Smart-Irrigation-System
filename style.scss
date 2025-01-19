@@ -1,5 +1,5 @@
 *{box-sizing: border-box; font-family: 'Jetbrains Mono', system-ui, sans-serif;}
-body{font-size: 25px; margin: 0; padding: 0;}
+body{font-size: 25px; margin: 0; padding: 0; transition: all 0.5s ease-in-out;}
 .sub-header{
     font-size: large;
     text-align: center;
@@ -35,11 +35,41 @@ body{font-size: 25px; margin: 0; padding: 0;}
     margin: 10px 0;
 }
 
-.tab1, .tab1 tr, .tab1 td, .tab1 th{
+.tab1 {
+    width: 90vw; 
+    margin: 0 auto;
+    max-width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    
+    td, th {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
+
+.tab1, .tab1 tr, .tab1 td, .tab1 th {
     border: 2px solid black;
     border-collapse: collapse;
     padding: 10px;
 }
+
+.dark{
+    position: sticky;
+    top: 90%;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin-left: calc(100% - 60px);
+}
+
+#dark{display: hidden;}
 
 @media all and  (max-width: 768px){
     .parent-1{

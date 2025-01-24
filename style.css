@@ -1,3 +1,104 @@
+.loader {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 200px;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #000;
+  --g:conic-gradient(#000 0 0) no-repeat text;
+  background: var(--g) 0, var(--g) 1ch, var(--g) 2ch, var(--g) 3ch, var(--g) 4ch, var(--g) 5ch, var(--g) 6ch;
+  background-position-y: 100%;
+  animation: l15 3s infinite;
+}
+
+.loader:before {
+  content: "Loading";
+}
+
+@keyframes l15 {
+  0% {
+    background-size: 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0;
+  }
+  14.28% {
+    background-size: 1ch 100%, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0;
+  }
+  28.57% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0;
+  }
+  42.85% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 0, 1ch 0, 1ch 0, 1ch 0;
+  }
+  57.14% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 0, 1ch 0, 1ch 0;
+  }
+  71.43% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 0, 1ch 0;
+  }
+  85.71% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 0;
+  }
+  100% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .parent-1 {
+    flex-direction: column;
+  }
+  .parent-1 .img-container {
+    width: 95%;
+    gap: 10px;
+  }
+  .parent-1 .img-container img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 500px) {
+  body {
+    font-size: 20px;
+  }
+  .parent-1 .img-container .text {
+    font-size: 0.8rem;
+  }
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  height: 55px;
+  background-color: #0D1721;
+}
+.nav li {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: left;
+  background-color: #0D1721;
+}
+.nav li:hover {
+  background-color: #04AA6D;
+}
+.nav li a {
+  text-decoration: none;
+  color: white;
+}
+.nav li a:hover {
+  color: black;
+}
+.nav .active {
+  color: black;
+  background-color: #04AA6D;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Jetbrains Mono", system-ui, sans-serif;
@@ -8,6 +109,7 @@ body {
   margin: 0;
   padding: 0;
   transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 .sub-header {
@@ -92,26 +194,6 @@ body {
   display: hidden;
 }
 
-@media all and (max-width: 768px) {
-  .parent-1 {
-    flex-direction: column;
-  }
-  .parent-1 .img-container {
-    width: 95%;
-    gap: 10px;
-  }
-  .parent-1 .img-container img {
-    width: 100%;
-  }
-}
-@media all and (max-width: 500px) {
-  body {
-    font-size: 20px;
-  }
-  .parent-1 .img-container .text {
-    font-size: 0.8rem;
-  }
-}
 .c {
   background-color: yellow;
   font-family: arial;

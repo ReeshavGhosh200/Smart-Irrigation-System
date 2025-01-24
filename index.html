@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Irrigation system Writeup</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/3dcdbc234b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="loader"></div>
+    <div class="page" style="display: none;">
+    <!-- ///////////////////////////////////////////////////////////// -->
+    
     <h2 class="header"><b>Smart Irrigation System</b></h2>
     <div class="sub-header"> <b>Reeshav Ghosh</b>, Ritam Das, Rajdeep Debnath, Rishabh Rakshit, Ayush Das, Anubhab Biswas</div>
     <div class="sub-header">January 2025</div>
     <br>
+
+    <ul class="nav">
+        <li class="active">Home</li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
+        <li><a href="./pages/more.html">More</a></li>
+    </ul> 
 
     <div class="dark" id="light" style="background-color: white;"><i class="fa-regular fa-sun"></i></div>
     <div class="dark" id="dark" style="background-color: black;"><i class="fa-solid fa-moon" style="color: white;"></i></div>
@@ -76,35 +87,35 @@
             </tr>
             <tr>
                 <td>ESP32</td>
-                <td><img src="./esp32.png" alt=""></td>
+                <td><img src="./images/esp32.png" alt=""></td>
                 <td>Rs. 250</td>
                 <td>A Low cost MCU with Wi-Fi and Bluetooth capabilities</td>
                 <td>4MB - 16MB Flash storage <br> 512KB SRAM <br> Built-in Wi-Fi and Bluetooth</td>
             </tr>
             <tr>
                 <td>Soil Moisture Sensor</td>
-                <td><img src="./soil moisture.png" alt=""></td>
+                <td><img src="./images/soil moisture.png" alt=""></td>
                 <td>Rs. 50</td>
                 <td>Measures the volumetric water content in soil</td>
                 <td>-</td>
             </tr>
             <tr>
                 <td>Soil pH Sensor</td>
-                <td><img src="./soil-ph.png" alt=""></td>
+                <td><img src="./images/soil-ph.png" alt=""></td>
                 <td>Rs. > 5000</td>
                 <td>Measures the pH level of the soil</td>
                 <td>-</td>
             </tr>
             <tr>
                 <td>DHT11</td>
-                <td><img src="./dht11.png" alt=""></td>
+                <td><img src="./images/dht11.png" alt=""></td>
                 <td>Rs. 65</td>
                 <td>Measures temperature and humidity</td>
                 <td>Temperature Range: 0-50°C <br> Humidity Range: 20-90% RH</td>
             </tr>
             <tr>
                 <td>Relay</td>
-                <td><img src="./relay.png" alt=""></td>
+                <td><img src="./images/relay.png" alt=""></td>
                 <td>Rs 35</td>
                 <td>Used to turn the machines on/off</td>
                 <td> - </td>
@@ -164,7 +175,7 @@
         Copyright © 2025
         <br>Original creator: Reeshav_Ghosh200
     </div>
-
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
